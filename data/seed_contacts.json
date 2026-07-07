@@ -1,0 +1,70 @@
+{
+  "_note": "ALL DATA FICTIONAL. Eight contacts covering every consent state the gate must handle. Dates chosen relative to July 2026 demo window.",
+  "contacts": [
+    {
+      "contact_id": "c_001",
+      "display_name": "Alice",
+      "email": "alice@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "express", "granted_at": "2025-11-03T14:22:00+00:00", "source": "web_form_v3", "wording": "Yes, email me Driftwood offers and news. Unsubscribe anytime."}
+      ]
+    },
+    {
+      "contact_id": "c_002",
+      "display_name": "Ben",
+      "email": "ben@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "implied_purchase", "granted_at": "2026-01-04T10:05:00+00:00", "source": "pos_purchase", "wording": "Existing business relationship: in-store purchase #8841."}
+      ]
+    },
+    {
+      "contact_id": "c_003",
+      "display_name": "Chloe",
+      "email": "chloe@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "implied_inquiry", "granted_at": "2025-11-20T09:00:00+00:00", "source": "contact_form", "wording": "Inquiry about wholesale pricing (no opt-in box checked)."}
+      ]
+    },
+    {
+      "contact_id": "c_004",
+      "display_name": "Dev",
+      "email": "dev@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "withdrawn", "granted_at": "2025-09-10T16:40:00+00:00", "source": "unsubscribe_link", "wording": "user clicked unsubscribe"},
+        {"channel": "email", "basis": "express", "granted_at": "2026-05-02T11:15:00+00:00", "source": "web_form_v4", "wording": "I'd like to re-subscribe to Driftwood emails. Unsubscribe anytime."}
+      ]
+    },
+    {
+      "contact_id": "c_005",
+      "display_name": "Emma",
+      "email": "emma@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "express", "granted_at": "2024-08-15T12:00:00+00:00", "source": "web_form_v2", "wording": "Sign me up for the newsletter."},
+        {"channel": "email", "basis": "withdrawn", "granted_at": "2026-06-01T08:30:00+00:00", "source": "unsubscribe_link", "wording": "user clicked unsubscribe"}
+      ]
+    },
+    {
+      "contact_id": "c_006",
+      "display_name": "Felix",
+      "email": "felix@example.test",
+      "consent_events": []
+    },
+    {
+      "contact_id": "c_007",
+      "display_name": "Grace",
+      "email": "grace@example.test",
+      "consent_events": [
+        {"channel": "email", "basis": "express", "granted_at": "2026-02-14T18:00:00+00:00", "source": "web_form_v4", "wording": "Email me offers. Unsubscribe anytime."}
+      ]
+    },
+    {
+      "contact_id": "c_008",
+      "display_name": "Hana",
+      "email": "hana@example.test",
+      "phone": "+1-555-0100",
+      "consent_events": [
+        {"channel": "sms", "basis": "express", "granted_at": "2026-03-22T15:45:00+00:00", "source": "sms_keyword_JOIN", "wording": "Texted JOIN to 55500: SMS offers opt-in. Reply STOP to end."}
+      ]
+    }
+  ]
+}

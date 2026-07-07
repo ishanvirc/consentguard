@@ -1,0 +1,22 @@
+# Secrets — NEVER commit keys (hackathon rule + basic hygiene)
+.env
+*.pem
+
+# Media (generated assets stay out of the public repo; scripts stay in)
+video_assets/*.mp4
+video_assets/*.wav
+video_assets/*.png
+video_assets/work/
+
+# Local state
+*.db
+*.jsonl
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Local tooling + internal notes (not part of the public project)
+.claude/
+SUBMISSION.md

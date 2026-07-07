@@ -1,0 +1,24 @@
+{
+  "_note": "Demo campaign for a FICTIONAL business. Template B is deliberately non-compliant (no unsubscribe) to exercise the message-level check.",
+  "campaign_id": "summer_2026_promo",
+  "channel": "email",
+  "sender": {
+    "business_name": "Driftwood Coffee Roasters",
+    "mailing_address": "412 Harbourview Rd, Halifax NS B3H 0A1",
+    "contact": "hello@driftwood.example"
+  },
+  "recipients": [
+    {"contact_id": "c_001", "template": "template_a"},
+    {"contact_id": "c_002", "template": "template_a"},
+    {"contact_id": "c_003", "template": "template_a"},
+    {"contact_id": "c_004", "template": "template_a"},
+    {"contact_id": "c_005", "template": "template_a"},
+    {"contact_id": "c_006", "template": "template_a"},
+    {"contact_id": "c_007", "template": "template_b"},
+    {"contact_id": "c_008", "template": "template_a"}
+  ],
+  "templates": {
+    "template_a": "Subject: Summer roast is here ☀️\n\nHi {first_name},\n\nOur single-origin summer roast just landed — 15% off this week.\n\n—\nDriftwood Coffee Roasters\n412 Harbourview Rd, Halifax NS B3H 0A1 · hello@driftwood.example\nUnsubscribe: {unsubscribe_link}",
+    "template_b": "Subject: Summer roast is here ☀️\n\nHi {first_name},\n\nOur single-origin summer roast just landed — 15% off this week. See you soon!\n\n— Driftwood Coffee Roasters, 412 Harbourview Rd, Halifax NS · hello@driftwood.example"
+  }
+}

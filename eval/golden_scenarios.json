@@ -1,0 +1,14 @@
+{
+  "_note": "Labeled expected outcomes for the demo campaign. Verdicts are exact-match; explanations graded by LLM-as-judge via agents-cli eval. Every new real-world edge case becomes a new scenario — the golden set is the regression map.",
+  "campaign": "summer_2026_promo",
+  "scenarios": [
+    {"contact_id": "c_001", "expected_verdict": "PASS", "reason_code": "express_valid"},
+    {"contact_id": "c_002", "expected_verdict": "PASS", "reason_code": "implied_purchase_within_window"},
+    {"contact_id": "c_003", "expected_verdict": "BLOCK", "reason_code": "implied_inquiry_expired"},
+    {"contact_id": "c_004", "expected_verdict": "PASS", "reason_code": "renewed_express_supersedes_withdrawal", "adjudication": "auditor may flag the 2025 withdrawal; verifier must overturn via full history — latest record governs"},
+    {"contact_id": "c_005", "expected_verdict": "BLOCK", "reason_code": "withdrawn"},
+    {"contact_id": "c_006", "expected_verdict": "BLOCK", "reason_code": "no_record_fail_closed"},
+    {"contact_id": "c_007", "expected_verdict": "BLOCK", "reason_code": "message_missing_unsubscribe"},
+    {"contact_id": "c_008", "expected_verdict": "BLOCK", "reason_code": "channel_mismatch_sms_vs_email"}
+  ]
+}
