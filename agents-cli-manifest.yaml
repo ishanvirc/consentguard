@@ -1,0 +1,4 @@
+# agents-cli project manifest (schema: google.agents.cli._project.ProjectConfig)
+name: consentguard
+agent_directory: app
+deployment_target: none

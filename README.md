@@ -129,7 +129,11 @@ c_004 is the money shot: the producer flags it, the adversarial verifier re-pull
 
 ## Evaluation
 
-`eval/golden_scenarios.json` labels the expected verdict + reason code per contact. Run with `uv run agents-cli eval` (LLM-as-judge on the explanation quality; exact-match on verdicts). The golden set doubles as a regression map: every real-world edge case we hit becomes a new scenario.
+`eval/golden_scenarios.json` labels the expected verdict + reason code per contact, and `eval/eval_cases.json` wraps them as an agents-cli dataset. Run with:
+
+```bash
+uv run agents-cli eval run --dataset eval/eval_cases.json --metrics FINAL_RESPONSE_MATCH
+``` The golden set doubles as a regression map: every real-world edge case we hit becomes a new scenario.
 
 ## Roadmap
 

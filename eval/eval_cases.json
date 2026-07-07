@@ -1,0 +1,22 @@
+{
+  "_note": "agents-cli eval dataset (vertexai EvalCase schema). The reference is the expected outcome distilled from golden_scenarios.json (per-contact verdicts + reason codes).",
+  "eval_cases": [
+    {
+      "eval_case_id": "campaign_summer_vs_golden",
+      "prompt": {
+        "role": "user",
+        "parts": [{ "text": "Review campaign_summer.json" }]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "8 recipients evaluated under CASL. Verdicts: c_001 PASS (express consent via web form), c_002 PASS (implied purchase within 730-day window), c_003 BLOCK (implied inquiry older than 183 days — expired), c_004 PASS (2025 withdrawal superseded by renewed 2026 express consent — latest record governs), c_005 BLOCK (withdrawn/unsubscribed), c_006 BLOCK (no consent record — fail closed), c_007 BLOCK (template_b missing unsubscribe link), c_008 BLOCK (SMS-only consent on an email campaign — channel mismatch). Totals: 3 PASS, 5 BLOCK, each with cited evidence. Expected reason codes per contact are labeled in eval/golden_scenarios.json."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

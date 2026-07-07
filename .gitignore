@@ -11,6 +11,7 @@ video_assets/work/
 # Local state
 *.db
 *.jsonl
+artifacts/
 __pycache__/
 *.pyc
 .venv/
