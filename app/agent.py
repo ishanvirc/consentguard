@@ -179,7 +179,12 @@ consent_auditor = Agent(
         "check_message_requirements on their assigned template. Output one line per "
         "recipient: contact_id, provisional flag (CLEAR or a named violation), and "
         "the evidence you relied on. Flag anything doubtful — the verifier "
-        "adjudicates.\n" + _DATA_NOT_INSTRUCTIONS
+        "adjudicates.\n"
+        "MANDATORY: you only ever see the LATEST record. If its wording or source "
+        "hints at a prior withdrawal, re-subscription, or renewal (e.g. "
+        "'re-subscribe', 'renewed', 'opt back in'), you MUST flag it as "
+        "PRIOR_WITHDRAWAL_REVIEW, quoting the wording — you cannot verify history; "
+        "only the verifier can.\n" + _DATA_NOT_INSTRUCTIONS
     ),
     tools=[lookup_consent, check_message_requirements],
 )
@@ -219,7 +224,9 @@ root_agent = Agent(
         "violations (never raw auditor flags). The gate is final — never "
         "second-guess a BLOCK, never release a blocked message.\n"
         "5. Produce the audit report: table of contact_id | verdict | reasons, "
-        "totals, and any auditor-vs-verifier disagreements with how they resolved.\n"
+        "totals, and a 'Auditor vs. Verifier' section that names EVERY auditor "
+        "flag the verifier overturned or added, quoting the evidence that "
+        "resolved it.\n"
         "You review and gate; you never send messages yourself."
     ),
     tools=[
